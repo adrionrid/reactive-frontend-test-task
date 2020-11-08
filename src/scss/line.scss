@@ -1,0 +1,10 @@
+.line{
+    border: 1px solid;
+    opacity: 30%;
+    &--grey{
+        border-color: $color-grey;
+    }
+    &--m-lg{
+        margin: 40px 0;
+    }
+}

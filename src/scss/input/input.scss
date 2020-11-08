@@ -1,0 +1,36 @@
+.input {
+    &-title {
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        @extend .font-size-md;
+        @extend .font-bold;
+    }
+    &-group {
+        display: grid;
+        @extend .font-size-md;
+        row-gap: 8px;
+        &--row {
+            display: flex;
+            column-gap: 32px;
+            &-sm {
+                display: flex;
+                column-gap: 16px;
+            }
+            &-text {
+                color: $color-muted;
+            }
+        }
+    }
+    &-control {
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid $color-grey;
+        border-radius: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        @extend .font-size-md;
+    }
+}

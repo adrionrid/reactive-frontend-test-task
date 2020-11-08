@@ -1,0 +1,17 @@
+.registration{
+    display: grid;
+    row-gap: 24px;
+    @extend .font-primary;
+    &-result{
+        visibility: hidden;
+        display: none;
+    }
+    &--active{
+        visibility: visible;
+        display: flex;
+    }
+    &--hidden{
+        visibility: hidden;
+        display: none;
+    }
+}

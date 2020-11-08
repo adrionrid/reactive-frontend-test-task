@@ -1,0 +1,18 @@
+.info {
+    border-radius: 4px;
+    padding: 16px;
+    &__img{
+        float: left;
+        background-position: top left;
+    }
+    &__text{
+        margin-left: 32px;
+        @extend .font-size-md;
+    }
+    &--warning{
+        background-color: $color-warning;
+    }
+    &--warning > &__img{
+        @extend .icon-warning;
+    }
+}

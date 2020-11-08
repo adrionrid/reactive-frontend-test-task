@@ -1,0 +1,20 @@
+.list{
+    &__title {
+        @extend .font-bold;
+    }
+    &__content {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+    &__item {
+        padding-left: 1em;
+        text-indent: -1em;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        &:before {
+            content: "•";
+            padding-right: .7em;
+        }
+    }
+}

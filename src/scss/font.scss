@@ -1,0 +1,61 @@
+.font {
+    &-primary {
+        font-family: 'GOST UI 2 Regular', 'Segoe UI', Verdana, sans-serif;
+    }
+    &-secondary {
+        font-family: 'San Francisco Pro Display Regular', Tahoma, sans-serif;
+    }
+}
+.font {
+    &-normal {
+        font-weight: 400;
+    }
+    &-medium {
+        font-weight: 500;
+    }
+    &-bold {
+        font-weight: bold;
+    }
+    &-bolder {
+        font-weight: bolder;
+    }
+}
+.font {
+    &-size {
+        &-sm {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-md {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &-lg {
+            font-size: 22px;
+            line-height: 28px;
+        }
+        &-xl {
+            font-size: 48px;
+            line-height: 56px;
+        }
+    }
+}
+.font {
+    &-color {
+        &-white {
+            color: $color-white;
+        }
+        &-grey {
+            color: $color-grey;
+        }
+        &--dark-blue{
+            color: $button-color-secondary;
+        }
+    }
+}
+.font {
+    &-link {
+        text-decoration: none;
+        @extend .font-color--dark-blue;
+    }
+}

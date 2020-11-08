@@ -1,0 +1,74 @@
+$border-color-selected: $color-primary;
+$bg-color-selected: $color-white;
+$bg-color-unselected: $color-disabled;
+
+.checkbox {
+    $self: &;
+    width: 100%;
+    user-select: none;
+    &__label{
+        display: block;
+        position: relative;
+        padding: 16px;
+        padding-right: 32px;
+        border-radius: 4px;
+        border: 2px solid transparent;
+        background-color: $bg-color-unselected;
+        cursor: pointer;
+    }
+    &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked
+        {
+            +#{$self}__label{
+                border: 2px solid $border-color-selected;
+                background-color: $bg-color-selected;
+                #{$self}__mark {
+                    background-image: url("/src/img/icon/checkbox-on.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: $border-color-selected;
+                    border-radius: 1px;
+                    position: absolute;
+                    top: 18px;
+                    left: 18px;
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+    &__content{
+        position: relative;
+        left: 32px;
+    }
+    &__mark {
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        background-image: url("/src/img/icon/checkbox-off.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        &:after {
+            content: "";
+            position: absolute;
+        }
+    }
+    &--radio{
+        #{$self}__mark {
+            background-image: url("/src/img/icon/radio-off.svg");
+        }
+        #{$self}__input:checked {
+            +#{$self}__label{
+                #{$self}__mark {
+                    background-image: url("/src/img/icon/radio-on.svg");
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

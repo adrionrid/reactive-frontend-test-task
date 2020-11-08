@@ -1,0 +1,34 @@
+.button{
+    width: 100%;
+    min-height: 48px;
+    border-style: none;
+    border-radius: 4px;
+    @extend .font-size-md;
+    cursor: pointer;
+    &--primary{
+        color: $color-white;
+        background-color: $button-color-primary;
+    }
+    &--secondary{
+        color: $button-color-secondary;
+        background-color: $color-white;
+        border: 1px solid rgba($button-color-secondary, 0.5);
+        box-sizing: border-box;
+    }
+    &-group{
+        display: flex;
+        column-gap: 32px;
+    }
+    &-edit{
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        color: $button-color-primary;
+        @extend .font-size-sm;
+        &__img{
+            @extend .icon-edit;
+        }
+        cursor: pointer;
+    }
+}

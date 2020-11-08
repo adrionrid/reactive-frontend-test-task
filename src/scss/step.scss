@@ -1,0 +1,88 @@
+.step{
+    $self-step: &;
+    background-color: $color-white;
+    border-radius: 4px;
+    padding: 16px;
+    width: 100%;
+    &__header{
+        $self-header: &;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        &-title{
+            @extend .font-secondary;
+            font-size: 21px;
+            font-weight: bold;
+            line-height: 32px;
+            margin-left: 32px;
+        }
+        &-mark{
+            @include circle(48px);
+            user-select: none;
+            @extend .font-secondary;
+            @extend .font-size-lg;
+            color: $color-white;
+            background-color: $button-color-primary;
+        }
+        &-button{
+            margin-left: auto;
+        }
+    }
+    &__content{
+        display: grid;
+        row-gap: 16px;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        margin-left: 80px;
+        margin-right: 80px;
+        @extend .container-sm;
+        @extend .font-size-md;
+        &--center{
+            max-width: 100%;
+            padding: auto;
+        }
+        &-inner{
+            display: grid;
+            row-gap: 16px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    }
+    &--active{
+        #{$self-step}__header-button{
+            visibility: hidden;
+            display: none;
+        }
+    }
+    &--success{
+        #{$self-step}__header-mark{
+            font-size: 0;
+            background-image: url("/src/img/icon/success.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: $color-success;
+            color: $color-white;
+        }
+        #{$self-step}__header-button{
+            display: flex;
+        }
+    }
+    &--disabled{
+        #{$self-step}__header-title{
+            color: $color-grey-light;
+        }
+        #{$self-step}__header-mark{
+            background-color: $color-grey-light;
+        }
+        #{$self-step}__header-button{
+            visibility: hidden;
+            display: none;
+        }
+    }
+    &--hide-content{
+        #{$self-step}__content{
+            visibility: hidden;
+            display: none;
+        }
+    }
+}

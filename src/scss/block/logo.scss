@@ -1,0 +1,11 @@
+.logo {
+    display: flex;
+    column-gap: 21px;
+    align-items: center;
+    @extend .font-bold;
+    &-img{
+        background: url("/src/img/logo.svg");
+        min-width: 31px;
+        min-height: 56px;
+    }
+}

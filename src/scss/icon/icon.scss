@@ -1,0 +1,21 @@
+@mixin icon-settings {
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.icon{
+    &-edit{
+        background: url("/src/img/icon/edit.svg");
+        @include icon-settings;
+    }
+    &-warning{
+        background-image: url("/src/img/icon/warning.svg");
+        @include icon-settings;
+    }
+    &-user{
+        background-image: url("/src/img/icon/user.svg");
+        @include icon-settings;
+    }
+}

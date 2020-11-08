@@ -1,0 +1,19 @@
+.header {
+    @extend .bg-color-primary;
+    @extend .font-primary;
+    @extend .font-size-md;
+    @extend .font-color-white;
+      
+    &__content{
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    &--fixed{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}

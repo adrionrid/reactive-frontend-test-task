@@ -1,17 +1,17 @@
 .container {
     max-width: 1120px;
     margin: auto;
-    padding: auto calc(50% - 560px);
+    padding: 0 calc(50% - 560px);
     &-xs{
         max-width: 256px;
-        padding: auto calc(50% - 560px);
+        padding: 0 calc(50% - 560px);
     }
     &-sm{
         max-width: 448px;
-        padding: auto calc(50% - 560px);
+        padding: 0 calc(50% - 560px);
     }
     &-md{
         max-width: 736px;
-        padding: auto calc(50% - 560px);
+        padding: 0 calc(50% - 560px);
     }
 }

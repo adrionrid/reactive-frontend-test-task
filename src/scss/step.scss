@@ -51,6 +51,7 @@
         #{$self-step}__header-button{
             visibility: hidden;
             display: none;
+            height: 0;
         }
     }
     &--success{
@@ -76,12 +77,14 @@
         #{$self-step}__header-button{
             visibility: hidden;
             display: none;
+            height: 0;
         }
     }
     &--hide-content{
         #{$self-step}__content{
             visibility: hidden;
             display: none;
+            height: 0;
         }
     }
 }

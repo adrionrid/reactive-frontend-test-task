@@ -30,7 +30,7 @@
     }
     &__content{
         display: grid;
-        row-gap: 16px;
+        @include grid-column(16px);
         margin-top: 16px;
         margin-bottom: 24px;
         margin-left: 80px;
@@ -42,16 +42,14 @@
         }
         &-inner{
             display: grid;
-            row-gap: 16px;
-            margin-top: 8px;
-            margin-bottom: 8px;
+            @include grid-column(16px);
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     }
     &--active{
         #{$self-step}__header-button{
-            visibility: hidden;
-            display: none;
-            height: 0;
+            @include element-hide;
         }
     }
     &--success{
@@ -75,16 +73,13 @@
             background-color: $color-grey-light;
         }
         #{$self-step}__header-button{
-            visibility: hidden;
-            display: none;
-            height: 0;
+            @include element-hide;
         }
+        @extend #{$self-step}--hide-content;
     }
     &--hide-content{
         #{$self-step}__content{
-            visibility: hidden;
-            display: none;
-            height: 0;
+            @include element-hide;
         }
     }
 }

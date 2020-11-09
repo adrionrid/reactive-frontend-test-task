@@ -9,13 +9,13 @@
     &-group {
         display: grid;
         @extend .font-size-md;
-        row-gap: 8px;
+        @include grid-column(8px);
         &--row {
-            display: flex;
-            column-gap: 32px;
+            @extend .flex;
+            @include grid-row(16px);
             &-sm {
-                display: flex;
-                column-gap: 16px;
+                @extend .flex;
+                @include grid-row(8px);
             }
             &-text {
                 color: $color-muted;

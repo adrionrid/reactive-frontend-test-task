@@ -1,5 +1,8 @@
 @import "reset.scss";
 
+@import "./mixin/element-hide.scss";
+@import "./mixin/grid.scss";
+
 @import "./variable/color.scss";
 @import "bg-color.scss";
 
@@ -14,6 +17,7 @@
 @import "circle.scss";
 @import "line.scss";
 
+@import "./block/flex.scss";
 @import "./block/container.scss";
 @import "./block/list.scss";
 @import "./block/info.scss";

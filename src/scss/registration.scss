@@ -1,6 +1,6 @@
 .registration{
     display: grid;
-    row-gap: 24px;
+    @include grid-column(24px);
     @extend .font-primary;
     &-result{
         visibility: hidden;

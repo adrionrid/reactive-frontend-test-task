@@ -1,0 +1,30 @@
+@mixin grid-column($size) {
+    $size: $size / 2;
+    & > * {
+        margin-top: $size;
+        margin-bottom: $size;
+    }
+    & > *:first-child {
+        margin-top: 0;
+        margin-bottom: $size;
+    }
+    & > *:last-child {
+        margin-top: $size;
+        margin-bottom: 0;
+    }
+}
+@mixin grid-row($size) {
+    $size: $size / 2;
+    & > * {
+        margin-left: $size;
+        margin-right: $size;
+    }
+    & > *:first-child {
+        margin-left: 0;
+        margin-right: $size;
+    }
+    & > *:last-child {
+        margin-left: $size;
+        margin-right: 0;
+    }
+}

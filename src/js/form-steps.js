@@ -1,10 +1,27 @@
-window.selectTab = selectTab;
-window.nextTab = nextTab;
-
 var currentTab = 0;
 var tabClassName = "step";
 
-setActive(currentTab);
+$(document).ready(function() {
+  addEvents();
+});
+
+function addEvents() {
+  var anchors = document.getElementsByClassName('nextTab');
+  for(var i = 0; i < anchors.length; i++) {
+      var anchor = anchors[i];
+      anchor.onclick = function() {
+        nextTab();
+      }
+  }
+  var anchors = document.getElementsByClassName('selectTab');
+  for(var i = 0; i < anchors.length; i++) {
+      var anchor = anchors[i];
+      anchor.onclick = function() {
+        selectTab(i - anchors.length);
+      }
+  }
+};
+
 function nextTab() {
   if (!validateForm()) {
     return false;

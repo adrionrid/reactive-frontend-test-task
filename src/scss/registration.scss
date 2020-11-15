@@ -1,5 +1,6 @@
 .registration{
-    display: grid;
+    @extend .flex;
+    flex-direction: column;
     @include grid-column(24px);
     @extend .font-primary;
     &-result{

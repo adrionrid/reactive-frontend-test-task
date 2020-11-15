@@ -6,7 +6,7 @@
     width: 100%;
     &__header{
         $self-header: &;
-        display: flex;
+        @extend .flex;
         align-items: center;
         width: 100%;
         &-title{

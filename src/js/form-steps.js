@@ -7,17 +7,15 @@ $(document).ready(function() {
 
 function addEvents() {
   var anchors = document.getElementsByClassName('nextTab');
-  for(var i = 0; i < anchors.length; i++) {
-      var anchor = anchors[i];
-      anchor.onclick = function() {
+  for(let i = 0; i < anchors.length; i++) {
+      anchors[i].onclick = function() {
         nextTab();
       }
   }
   var anchors = document.getElementsByClassName('selectTab');
-  for(var i = 0; i < anchors.length; i++) {
-      var anchor = anchors[i];
-      anchor.onclick = function() {
-        selectTab(i - anchors.length);
+  for(let i = 0; i < anchors.length; i++) {
+      anchors[i].onclick = function() {
+        selectTab(i);
       }
   }
 };
@@ -52,7 +50,7 @@ function validateForm() {
 
 function setActive(tab) {
   var x = document.getElementsByClassName(tabClassName);
-  for (i = 0; i < x.length; i++) {
+  for (var i = 0; i < x.length; i++) {
     if(i < tab) {
       $(x[i]).removeClass("step--active");
       $(x[i]).removeClass("step--disabled");
